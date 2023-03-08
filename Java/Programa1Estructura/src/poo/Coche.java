@@ -83,7 +83,7 @@ peso_plataforma+" kg.";
 		}
 		return"El peso del coche es "+peso_total+"kg";
 	}
-	public int precio_coche() {
+	public int precio_coche() { //METODO GET Y SET 
 		int precio_final=10000;
 		if(asientos_cuero==true) {
 			precio_final+=2000;

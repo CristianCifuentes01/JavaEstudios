@@ -34,7 +34,7 @@ class Empleados{
 	
 	public Empleados(String nom) {//CONSTRUCTOR 
 		nombre=nom;
-		seccion = "Administración";
+		seccion = "Administracion";
 		Id=IdSiguiente;
 		IdSiguiente++;
 	}

@@ -1,9 +1,10 @@
 package poo;
 
-import java.util.Scanner;
-
+//import java.util.Scanner;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 public class Practica {
-	public static void main (String [] args) {
+	public static void main (String [] args)  throws InterruptedException {
 		/*int contador =2;
 		do {
 			System.out.println(contador);
@@ -42,7 +43,7 @@ public class Practica {
 		/*for(int i=1;i<=5;i++) {
 			int factorial=1;
 			
-			for(int j=1;j<=i;j++) {
+			for(int j=2;j<=i;j++) {
 				factorial=factorial*j;
 			}
 			System.out.printf("El factorial de %d es igual a %d\n",i,factorial);
@@ -91,6 +92,14 @@ public class Practica {
         }
         System.out.printf("El valor total de venta es: $%.2f%n", total);*/
 		
+		  DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+	        
+	        while (true) {
+	            LocalTime now = LocalTime.now();
+	            String timeString = now.format(formatter);
+	            System.out.println(timeString);
+	            Thread.sleep(1000); // Espera un segundo antes de actualizar la hora
+	        }
 	}
 
 }

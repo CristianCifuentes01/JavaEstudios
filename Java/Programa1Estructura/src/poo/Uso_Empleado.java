@@ -24,9 +24,9 @@ public class Uso_Empleado {
 					+ " Fecha de Alta: "+ misEmpleados[i].dameFechaContrato());
 		}*/
 		for(Empleado e: misEmpleados) {  //BUCLE FOR MEJORADO
-			System.out.println( " Nombre: "+e.dameNombre()
-					+ " Saldo de cuenta: "+ e.dameSueldo()
-					+ " Fecha de Alta: "+ e.dameFechaContrato());
+			System.out.println( "Nombre: "+e.dameNombre()
+					+ " \nSaldo de cuenta: "+ e.dameSueldo()
+					+ "\nFecha de Alta: "+ e.dameFechaContrato()+"\n");
 		}
 
 
@@ -66,5 +66,27 @@ class Empleado{
 		double aumento=sueldo*(porcentaje/100);
 		sueldo+=aumento;
 	}
+}
+
+//CLASE JEFATURA VA HA HEREDAR LOS ATRUBUTOS DE LA CLASE EMPLEADO 
+class Jefatura extends Empleado{
+	
+	public Jefatura(String nom, double sue, int year, int mes, int dia) {//CREACION DEL CONSTURCTOR
+		super(nom, sue,year,mes,dia);
+	}
+	
+	public void estableceIncentivo(double b) {//METODO SETTER
+		incentivo=b;
+	}
+	
+	public double dameSueldo() {//METODO GETTER
+		double sueldoJefe=super.dameSueldo();
+		return sueldoJefe+incentivo;
+	}
+	
+	private double incentivo;
+	
+	
+	
 	
 }

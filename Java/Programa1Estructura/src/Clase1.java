@@ -7,8 +7,8 @@ public class Clase1 {
 	public static void main (String args[]) {
 		Scanner entrada=new Scanner(System.in);
 		
-		/*
-		String cadena=JOptionPane.showInputDialog("Escribe el radio del circulo ");
+		
+		/*String cadena=JOptionPane.showInputDialog("Escribe el radio del circulo ");
 		//String nombre=entrada.nextLine();
 		double rad=Double.parseDouble(cadena);
 		double area=(Math.PI)*(Math.pow(rad,2));
@@ -30,7 +30,7 @@ public class Clase1 {
 		
 		
 		
-		/*double resultado=0;
+		double resultado=0;
 		double resultado2=0;
 		boolean sigue;
 		System.out.println("Escribe el valor de a: ");
@@ -62,6 +62,7 @@ public class Clase1 {
 			System.out.println("Solucion 1: "+ resultado);
 			System.out.println("Solucion 2: "+ resultado2);
 		}
+		
 		
 		
 		/*String contra="123hola";

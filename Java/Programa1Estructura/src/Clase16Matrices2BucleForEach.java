@@ -4,9 +4,10 @@ public class Clase16Matrices2BucleForEach {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] paises=new String[8];
+		int cantMatri=8;
+		String[] paises=new String[cantMatri];
 		
-		for(int i=0;i<8;i++) {
+		for(int i=0;i<paises.length;i++) {
 			paises[i]=JOptionPane.showInputDialog("Introduce el pais "+(i+1)); 
 		}
 		

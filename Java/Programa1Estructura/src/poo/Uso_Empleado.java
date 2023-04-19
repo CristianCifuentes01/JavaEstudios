@@ -6,13 +6,21 @@ public class Uso_Empleado {
 
 	public static void main(String[] args) {
 		
+		Jefatura jefe_RRHH=new Jefatura("Juan", 55000,2006,9,25);
+		jefe_RRHH.estableceIncentivo(2570);
 		
-		Empleado[] misEmpleados=new Empleado[4];
+		
+		Empleado[] misEmpleados=new Empleado[6];
 		misEmpleados[0]=new Empleado("Cristian Cifeuntes",85000,1990,12,17);
 		misEmpleados[1]=new Empleado("Andres Ruiz",94000,1995,06,02);
 		misEmpleados[2]=new Empleado("Camilo Suarez",67000,1989,03,19);
 		misEmpleados[3]=new Empleado("Antonio ");
+		misEmpleados[4]=jefe_RRHH; //POLIMORFISMO
+		misEmpleados[5]= new Jefatura("Maria",94000,1995,06,02);
 		
+		//CASTING (REFUNDICION DE OBJETOS)
+		Jefatura jefe_Finanzas=(Jefatura)misEmpleados[5];
+		jefe_Finanzas.estableceIncentivo(50000);
 		
 		for(Empleado e: misEmpleados) { //BUCLE FOR MEJORADO 
 			e.subeSueldo(5);
@@ -69,7 +77,7 @@ class Empleado{
 }
 
 //CLASE JEFATURA VA HA HEREDAR LOS ATRUBUTOS DE LA CLASE EMPLEADO 
-class Jefatura extends Empleado{
+class  Jefatura extends Empleado{
 	
 	public Jefatura(String nom, double sue, int year, int mes, int dia) {//CREACION DEL CONSTURCTOR
 		super(nom, sue,year,mes,dia);
@@ -85,8 +93,7 @@ class Jefatura extends Empleado{
 	}
 	
 	private double incentivo;
-	
-	
-	
-	
+		
 }
+
+

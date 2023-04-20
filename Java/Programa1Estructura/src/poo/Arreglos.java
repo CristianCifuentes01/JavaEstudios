@@ -38,6 +38,8 @@ public class Arreglos {
 	 	for ( int cara = 1; cara < frecuencia.length; cara++ ) {
 	 		System.out.printf( "%4d%10d\n", cara, frecuencia[ cara ] );
 	 	}*/
+	
+	
 	 	
 	int arreglo[] = { 0, 0, 0, 0, 0, 0, 1, 2, 4, 2, 1 };
 	 

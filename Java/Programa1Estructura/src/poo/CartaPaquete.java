@@ -19,39 +19,39 @@ public class CartaPaquete {
 	 
 	 // llena el paquete con objetos Carta
 	 for ( int cuenta = 0; cuenta < paquete.length; cuenta++ )
-	 paquete[ cuenta ] =
-	 new Carta( caras[ cuenta % 13 ], palos[ cuenta / 13 ] );
+	 paquete[ cuenta ] = new Carta( caras[ cuenta % 13 ], palos[ cuenta / 13 ] );
 	 } // fin del constructor de PaqueteDeCartas
 	
 	  // baraja el paquete de Cartas con algoritmo de una pasada
 
 	 public void barajar()
 	 {
-	  // después de barajar, la repartición debe empezar en paquete[ 0 ] otra vez
-	 cartaActual = 0; // reinicializa cartaActual
+		 // después de barajar, la repartición debe empezar en paquete[ 0 ] otra vez
+		 cartaActual = 0; // reinicializa cartaActual
 	 
-	  // para cada Carta, selecciona otra Carta aleatoria y las intercambia
-	 for ( int primera = 0; primera < paquete.length; primera++ )
-	 {
-	 // selecciona un número aleatorio entre 0 y 51
-	 int segunda = numerosAleatorios.nextInt( NUMERO_DE_CARTAS );
+		 // para cada Carta, selecciona otra Carta aleatoria y las intercambia
+		 for ( int primera = 0; primera < paquete.length; primera++ )
+		 {
+			 // selecciona un número aleatorio entre 0 y 51
+			 int segunda = numerosAleatorios.nextInt( NUMERO_DE_CARTAS );
 	 
-	 // intercambia Carta actual con la Carta seleccionada al azar
-	 Carta temp = paquete[ primera ];
-	 paquete[ primera ] = paquete[ segunda ];
-	 paquete[ segunda ] = temp;
-	 } // fin de for
+			 // intercambia Carta actual con la Carta seleccionada al azar
+			 Carta temp = paquete[ primera ];
+			 paquete[ primera ] = paquete[ segunda ];
+			 paquete[ segunda ] = temp;
+		 } // fin de for
 	 } // fin de método barajar
 	 
 	 // reparte una Carta
 	 public Carta repartirCarta()
 	 {
-	 // determina si quedan Cartas por repartir
-	 if ( cartaActual < paquete.length )
-	 return paquete[ cartaActual++ ]; // devuelve la Carta actual en el arreglo
-	 else
-	 return null; // devuelve null para indicar que se repartieron todas las Cartas
+		 // determina si quedan Cartas por repartir
+		 if ( cartaActual < paquete.length )
+			 return paquete[ cartaActual++ ]; // devuelve la Carta actual en el arreglo
+		 else
+			 return null; // devuelve null para indicar que se repartieron todas las Cartas
 	 } // fin del método repartirCarta
-	
+	 
+	 
 }
 

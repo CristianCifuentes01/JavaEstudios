@@ -2,35 +2,26 @@ package prueba2;
 
 //Fig. 3.8: GradeBookTest.java
 //Create and manipulate a GradeBook object.
-import java.util.Scanner; // program uses Scanner
-
 public class GradeBookTest
 {
-// main method begins program execution
-public static void main( String args[] )
-{ 
-	
-   // create Scanner to obtain input from command window
-   Scanner entrada = new Scanner( System.in );
-
-   // create a GradeBook object and assign it to myGradeBook
-   GradeBook myGradeBook = new GradeBook("introduccion Java", "Juan"); 
-
-   // display initial value of courseName
-   //System.out.printf( "El nombre del curso actual: %s\n\n",
-     // myGradeBook.getCourseName() );
-
-  
-   // prompt for and read course name
-   /*System.out.println( "Ingrese el nombre del curso:" );
-   String elNombre = entrada.nextLine(); // read a line of text
-   myGradeBook.setCourseName( elNombre ); // set the course name
-   System.out.println(); */// outputs a blank line
-
-   // display welcome message after specifying course name
-   myGradeBook.displayMessage();
-   
-} 
-
-} 
-
+	   // main method begins program execution
+	   public static void main( String args[] )
+	   {
+	      // two-dimensional array of student grades
+	      int gradesArray[][] = { { 87, 96, 70 },
+	                              { 68, 87, 90 },
+	                              { 94, 100, 90 },
+	                              { 100, 81, 82 },
+	                              { 83, 65, 85 },
+	                              { 78, 87, 65 },
+	                              { 85, 75, 83 }, 
+	                              { 91, 94, 100 },
+	                              { 76, 72, 84 },
+	                              { 87, 93, 73 } };
+	      
+	      GradeBook myGradeBook = new GradeBook( 
+	         "CS101 Introduction to Java Programming", gradesArray );
+	      myGradeBook.displayMessage();
+	      myGradeBook.processGrades();
+	   } // end main
+	} // end class GradeBookTest
